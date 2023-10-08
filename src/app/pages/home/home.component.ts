@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  category: string|undefined
   cols=3
   constructor() { }
 
@@ -16,5 +17,9 @@ export class HomeComponent implements OnInit {
 
   oncolumnsCountChange(colsNum:number): void {
     this.cols = colsNum
+  }
+
+  onShowCategory(newCategory:string):void {
+    this.category=newCategory
   }
 }
