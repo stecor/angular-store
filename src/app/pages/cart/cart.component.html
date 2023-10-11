@@ -36,7 +36,7 @@
       <span>{{element.quantity}}</span> 
       <button mat-icon-button><mat-icon>add</mat-icon></button>
       </td>
-      <button mat-raised-button color="primary" class="float-right">Procced to Checkout</button>
+      
       <td mat-footer-cell *matFooterCellDef>
       </td>
     </ng-container>
@@ -68,13 +68,16 @@
         </button>
       </td>
         <td mat-footer-cell *matFooterCellDef>
+            <button mat-raised-button color="primary" class="float-right">Procced to Checkout</button>
         </td>
     </ng-container>
   
-
+    
     <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
     <tr mat-row *matRowDef="let row; columns:displayColumns"></tr>
-    <tr mat-footer-row *matFooterRowDef="displayColumns"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayColumns">
+      
+    </tr>
   </table>
 </mat-card>
 <mat-card *ngIf="!cart.items.length">
